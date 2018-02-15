@@ -111,11 +111,22 @@ SELECT * FROM Artist WHERE Name LIKE '%Black%';
 
 /* TABLE - EMPLOYEE */
 -- 1. List all Employee first and last names only that live in Calgary.
+SELECT LastName, FirstName FROM Employee WHERE City = 'Calgary';
+
 -- 2. Find the first and last name and birthdate for the youngest employee.
+SELECT FirstName, LastName, MAX(BirthDate) FROM Employee;
+
 -- 3. Find the first and last name and birthdate for the oldest employee.
+SELECT FirstName, LastName, MIN(BirthDate) FROM Employee;
+
 -- 4. Find everyone that reports to Nancy Edwards (Use the ReportsTo column).
+SELECT * FROM Employee WHERE ReportsTo = 2; --ReportsTo is equal to 2 because the ReportsTo column is assigned to the EmployeeId.
+
 -- 5. You will need to query the employee table to find the Id for Nancy Edwards.
+SELECT EmployeeId FROM Employee WHERE FirstName = 'Nancy' AND Lastname = 'Edwards';
+
 -- 6. Count how many people live in Lethbridge.
+SELECT COUNT(*) FROM Employee WHERE City = 'Lethbridge';
 
 /* TABLE - INVOICE */
 -- 1. Count how many orders were made from the USA.
