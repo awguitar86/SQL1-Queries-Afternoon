@@ -28,12 +28,20 @@ SELECT * FROM Person ORDER BY HeightCm DESC;
 SELECT * FROM Person ORDER BY HeightCm;
 
 -- 5. List all the people in the Person table by Age from oldest to youngest.
-
+SELECT * FROM Person ORDER BY Age DESC;
 
 -- 6. List all the people in the Person table older than age 20.
+SELECT * FROM Person WHERE Age > 20;
+
 -- 7. List all the people in the Person table that are exactly 18.
+SELECT * FROM Person WHERE Age = 18;
+
 -- 8. List all the people in the Person table that are less than 20 and older than 30.
+SELECT * FROM Person WHERE Age NOT BETWEEN 20 AND 30;
+
 -- 9. List all the people in the Person table that are not 27 (Use not equals).
+
+
 -- 10. List all the people in the Person table where their favorite color is not red.
 -- 11. List all the people in the Person table where their favorite color is not red and is not blue.
 -- 12. List all the people in the Person table where their favorite color is orange or green.
