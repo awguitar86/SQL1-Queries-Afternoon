@@ -22,8 +22,14 @@ VALUES ('Ted', 25, 182.88, 'Provo', 'Blue'),
        ('George', 62, 177.89, 'Boise', 'Brown');
 
 -- 3. List all the people in the Person table by Height from tallest to shortest.
+SELECT * FROM Person ORDER BY HeightCm DESC;
+
 -- 4. List all the people in the Person table by Height from shortest to tallest.
+SELECT * FROM Person ORDER BY HeightCm;
+
 -- 5. List all the people in the Person table by Age from oldest to youngest.
+
+
 -- 6. List all the people in the Person table older than age 20.
 -- 7. List all the people in the Person table that are exactly 18.
 -- 8. List all the people in the Person table that are less than 20 and older than 30.
