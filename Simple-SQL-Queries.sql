@@ -1,10 +1,26 @@
-/*** SIMPLE SQL QUERIES ***/
+/**** SIMPLE SQL QUERIES ****/
 
 /* TABLE - PEOPLE */
 -- 1. Create a table called Person that records a person's ID, Name, Age, Height ( in cm ), City, FavoriteColor.
         --ID should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
+CREATE TABLE Person (
+  PersonId INTEGER PRIMARY KEY AUTOINCREMENT,
+  Name VARCHAR(40),
+  Age INTEGER,
+  HeightCm FLOAT,
+  City VARCHAR(40),
+  FavoriteColor VARCHAR(40)
+  );
+
 -- 2. Add 5 different people into the Person database.
         --Remember to not include the ID because it should auto-increment.
+INSERT INTO Person (Name, Age, HeightCm, City, FavoriteColor)
+VALUES ('Ted', 25, 182.88, 'Provo', 'Blue'), 
+	   ('Tim', 34, 168.45, 'Layton', 'Green'),
+       ('Betty', 54, 145.76, 'Nephi', 'Purple'),
+       ('Tegan', 41, 156.32, 'Seattle', 'Red'),
+       ('George', 62, 177.89, 'Boise', 'Brown');
+
 -- 3. List all the people in the Person table by Height from tallest to shortest.
 -- 4. List all the people in the Person table by Height from shortest to tallest.
 -- 5. List all the people in the Person table by Age from oldest to youngest.
