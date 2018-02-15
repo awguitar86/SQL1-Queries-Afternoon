@@ -58,15 +58,37 @@ SELECT * FROM Person WHERE FavoriteColor IN ('Orange', 'Green', 'Blue');
 -- 14. List all the people in the Person table where their favorite color is yellow or purple (use IN).
 SELECT * FROM Person WHERE FavoriteColor IN ('Yellow', 'Purple');
 
+
 /* TABLE - ORDERS */
 -- 1. Create a table called Orders that records: PersonID, ProductName, ProductPrice, Quantity.
+CREATE TABLE Orders (
+  PersonID INTEGER,
+  ProductName TEXT,
+  ProductPrice FLOAT,
+  Quantity INTEGER
+  );
+
 -- 2. Add 5 Orders to the Orders table.
         --Make orders for at least two different people.
         --PersonID should be different for different people.
+INSERT INTO Orders (PersonID, ProductName, ProductPrice, Quantity)
+VALUES (1, 'iPhone X', 1099.00, 1222555),
+  	   (2, 'Macbook Pro', 2199.00, 1234567),
+       (3, 'iWatch', 459.00, 987654),
+       (4, 'iPod', 359.00, 54321),
+       (5, 'Apple TV', 249.00, 5647382);
+
 -- 3. Select all the records from the Orders table.
+SELECT * FROM Orders;
+
 -- 4. Calculate the total number of products ordered.
+SELECT SUM(Quantity) FROM Orders;
+
 -- 5. Calculate the total order price.
+SELECT SUM(ProductPrice) FROM Orders;
+
 -- 6. Calculate the total order price by a single PersonID.
+SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 1;
 
 /* TABLE - ARTIST */
 -- 1. Add 3 new Artists to the Artist table. ( It's already created )
