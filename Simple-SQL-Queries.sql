@@ -40,11 +40,18 @@ SELECT * FROM Person WHERE Age = 18;
 SELECT * FROM Person WHERE Age NOT BETWEEN 20 AND 30;
 
 -- 9. List all the people in the Person table that are not 27 (Use not equals).
-
+SELECT * FROM Person WHERE Age <> 27;
+SELECT * FROM Person WHERE Age != 27;
 
 -- 10. List all the people in the Person table where their favorite color is not red.
+SELECT * FROM Person WHERE FavoriteColor <> 'Red';
+
 -- 11. List all the people in the Person table where their favorite color is not red and is not blue.
+SELECT * FROM Person WHERE FavoriteColor NOT IN ('Red', 'Blue');
+
 -- 12. List all the people in the Person table where their favorite color is orange or green.
+
+
 -- 13. List all the people in the Person table where their favorite color is orange, green or blue (use IN).
 -- 14. List all the people in the Person table where their favorite color is yellow or purple (use IN).
 
