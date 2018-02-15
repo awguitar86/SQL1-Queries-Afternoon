@@ -50,10 +50,13 @@ SELECT * FROM Person WHERE FavoriteColor <> 'Red';
 SELECT * FROM Person WHERE FavoriteColor NOT IN ('Red', 'Blue');
 
 -- 12. List all the people in the Person table where their favorite color is orange or green.
-
+SELECT * FROM Person WHERE FavoriteColor IN ('Orange', 'Green');
 
 -- 13. List all the people in the Person table where their favorite color is orange, green or blue (use IN).
+SELECT * FROM Person WHERE FavoriteColor IN ('Orange', 'Green', 'Blue');
+
 -- 14. List all the people in the Person table where their favorite color is yellow or purple (use IN).
+SELECT * FROM Person WHERE FavoriteColor IN ('Yellow', 'Purple');
 
 /* TABLE - ORDERS */
 -- 1. Create a table called Orders that records: PersonID, ProductName, ProductPrice, Quantity.
