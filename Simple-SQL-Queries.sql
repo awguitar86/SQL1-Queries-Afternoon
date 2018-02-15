@@ -92,10 +92,22 @@ SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 1;
 
 /* TABLE - ARTIST */
 -- 1. Add 3 new Artists to the Artist table. ( It's already created )
+INSERT INTO Artist (ArtistId, Name) 
+VALUES (276, 'Thrice'),
+	   (277, 'Underoath'),
+       (278, 'Good Tiger');
+
 -- 2. Select 10 artists in reverse alphabetical order.
+SELECT * FROM Artist ORDER BY Name DESC LIMIT 10;
+
 -- 3. Select 5 artists in alphabetical order.
+SELECT * FROM Artist ORDER BY Name LIMIT 5;
+
 -- 4. Select all artists that start with the word "Black".
+SELECT * FROM Artist WHERE Name LIKE 'Black%';
+
 -- 5. Select all artists that contain the word "Black".
+SELECT * FROM Artist WHERE Name LIKE '%Black%';
 
 /* TABLE - EMPLOYEE */
 -- 1. List all Employee first and last names only that live in Calgary.
